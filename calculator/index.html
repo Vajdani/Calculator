@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <img src="calculator.png" alt="calc" onclick="Toggle()" class="ToggleButton">
+    <div class="CalcContainer" id="calc">
+        <div class="Calculator">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 5px;">
+                <p>Calculator</p>
+                <p>
+                    <button onclick="Toggle()" class="hideButtonVisuals">🗕</button>
+                    <button onclick="maximize()" class="hideButtonVisuals">🗖</button>
+                    <button onclick="Toggle()" class="hideButtonVisuals">🗙</button>
+                </p>
+            </div>
+            <div style="display: flex; flex-direction: column; text-align: right; padding: 0px 10px;">
+                <p id="outputUpper" style="font-size: 150%;color: gray" class="unselectable">⠀</p>
+                <p id="outputLower" style="font-size: 300%;">0</p>
+            </div>
+            <div class="grid-container">
+                <button class="grid-item-bright">C</button>
+                <button class="grid-item-bright">CE</button>
+                <button class="grid-item-bright">x<sup>2</sup></button>
+                <button class="grid-item-bright">÷</button>
+                <button class="grid-item">7</button>
+                <button class="grid-item">8</button>
+                <button class="grid-item">9</button>
+                <button class="grid-item-bright">×</button>
+                <button class="grid-item">4</button>
+                <button class="grid-item">5</button>
+                <button class="grid-item">6</button>
+                <button class="grid-item-bright">-</button>
+                <button class="grid-item">1</button>
+                <button class="grid-item">2</button>
+                <button class="grid-item">3</button>
+                <button class="grid-item-bright">+</button>
+                <button class="grid-item">±</button>
+                <button class="grid-item">0</button>
+                <button class="grid-item">.</button>
+                <button class="grid-item-blue">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

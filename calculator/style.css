@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.ToggleButton {
+    width: 5dvw;
+    height: 5dvw;
+
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+.ToggleButton:hover {
+    border: 2px solid gray;
+}
+
+.CalcContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Calculator {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    width: 25dvw;
+}
+
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+}
+
+.grid-item {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    font-size: 200%;
+    text-align: center;
+}
+.grid-item:hover {
+    background-color: rgb(95, 94, 94);
+}
+.grid-item:active {
+    background-color: rgb(112, 112, 112);
+}
+
+.grid-item-bright {
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    font-size: 200%;
+    text-align: center;
+}
+.grid-item-bright:hover {
+    background-color: rgb(145, 144, 144);
+}
+.grid-item-bright:active {
+    background-color: rgb(160, 160, 160);
+}
+
+.grid-item-blue {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    font-size: 200%;
+    text-align: center;
+}
+.grid-item-blue:hover {
+    background-color: rgb(0, 155, 155);
+}
+.grid-item-blue:active {
+    background-color: rgb(0, 175, 175);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hideButtonVisuals {
+    background-color: inherit;
+    border: 0;
+    color: white;
+}
