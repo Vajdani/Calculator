@@ -4,16 +4,17 @@
 }
 
 .ToggleButton {
+    margin: 5px;
+
     width: 5dvw;
     height: 5dvw;
 
-    border: 2px solid black;
     border-radius: 5px;
     transition: 0.25s;
 }
 
 .ToggleButton:hover {
-    border: 2px solid gray;
+    filter: invert(69%) sepia(0%) saturate(3307%) hue-rotate(356deg) brightness(95%) contrast(101%);
 }
 
 .CalcContainer {
@@ -96,4 +97,24 @@
     background-color: inherit;
     border: 0;
     color: white;
+}
+
+.taskbarButton-white {
+    background-color: inherit;
+}
+.taskbarButton-white:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.taskbarButton-white:active {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.taskbarButton-red {
+    background-color: inherit;
+}
+.taskbarButton-red:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.taskbarButton-red:active {
+    background-color: rgba(255, 0, 0, 0.75);
 }

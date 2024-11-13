@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <img src="calculator.png" alt="calc" onclick="Toggle()" class="ToggleButton">
+    <img src="calculator2.png" alt="calc" onclick="Toggle()" class="ToggleButton">
     <div class="CalcContainer" id="calc">
         <div class="Calculator">
             <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 5px;">
                 <p>Calculator</p>
                 <p>
-                    <button onclick="Toggle()" class="hideButtonVisuals">🗕</button>
-                    <button onclick="maximize()" class="hideButtonVisuals">🗖</button>
-                    <button onclick="Toggle()" class="hideButtonVisuals">🗙</button>
+                    <button onclick="Toggle()" class="hideButtonVisuals taskbarButton-white">🗕</button>
+                    <button onclick="maximize()" class="hideButtonVisuals taskbarButton-white">🗖</button>
+                    <button onclick="Toggle()" class="hideButtonVisuals taskbarButton-red">🗙</button>
                 </p>
             </div>
             <div style="display: flex; flex-direction: column; text-align: right; padding: 0px 10px;">
@@ -28,7 +28,7 @@
             <div class="grid-container">
                 <button class="grid-item-bright"    onclick="OnInput('c')">C</button>
                 <button class="grid-item-bright"    onclick="OnInput('ce')">CE</button>
-                <button class="grid-item-bright"    onclick="OnInput('sqrt')">x<sup>2</sup></button>
+                <button class="grid-item-bright"    onclick="OnInput('pow')">x<sup>2</sup></button>
                 <button class="grid-item-bright"    onclick="OnInput('div')">÷</button>
                 <button class="grid-item"           onclick="OnInput(7)">7</button>
                 <button class="grid-item"           onclick="OnInput(8)">8</button>
