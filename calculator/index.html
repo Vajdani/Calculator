@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Calculator</title>
 </head>
 
 <body>
     <img src="calculator2.png" alt="calc" onclick="Toggle()" class="ToggleButton">
     <div class="CalcContainer" id="calc">
-        <div class="Calculator">
-            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 5px;">
+        <div class="Calculator" id="calc-inner">
+            <div class="CalculatorTopBar" id="calcheader">
                 <p>Calculator</p>
                 <p>
                     <button onclick="Toggle()" class="hideButtonVisuals taskbarButton-white">🗕</button>
@@ -26,29 +25,32 @@
                 <p id="outputLower" style="font-size: 300%;">0</p>
             </div>
             <div class="grid-container">
-                <button class="grid-item-bright"    onclick="OnInput('c')">C</button>
-                <button class="grid-item-bright"    onclick="OnInput('ce')">CE</button>
-                <button class="grid-item-bright"    onclick="OnInput('pow')">x<sup>2</sup></button>
-                <button class="grid-item-bright"    onclick="OnInput('div')">÷</button>
-                <button class="grid-item"           onclick="OnInput(7)">7</button>
-                <button class="grid-item"           onclick="OnInput(8)">8</button>
-                <button class="grid-item"           onclick="OnInput(9)">9</button>
-                <button class="grid-item-bright"    onclick="OnInput('mul')">×</button>
-                <button class="grid-item"           onclick="OnInput(4)">4</button>
-                <button class="grid-item"           onclick="OnInput(5)">5</button>
-                <button class="grid-item"           onclick="OnInput(6)">6</button>
-                <button class="grid-item-bright"    onclick="OnInput('sub')">-</button>
-                <button class="grid-item"           onclick="OnInput(1)">1</button>
-                <button class="grid-item"           onclick="OnInput(2)">2</button>
-                <button class="grid-item"           onclick="OnInput(4)">3</button>
-                <button class="grid-item-bright"    onclick="OnInput('add')">+</button>
-                <button class="grid-item"           onclick="OnInput('inv')">±</button>
-                <button class="grid-item"           onclick="OnInput(0)">0</button>
-                <button class="grid-item"           onclick="OnInput('dec')">.</button>
-                <button class="grid-item-blue"      onclick="OnInput('ent')">=</button>
+                <button class="grid-item-bright"    id="c"      onclick="OnInput('c')"      >C</button>
+                <button class="grid-item-bright"    id="ce"     onclick="OnInput('ce')"     >CE</button>
+                <button class="grid-item-bright"                onclick="OnInput('pow')"    >x<sup>2</sup></button>
+                <button class="grid-item-bright"    id="div"    onclick="OnInput('div')"    >÷</button>
+                <button class="grid-item"           id="7"      onclick="OnInput(7)"        >7</button>
+                <button class="grid-item"           id="8"      onclick="OnInput(8)"        >8</button>
+                <button class="grid-item"           id="9"      onclick="OnInput(9)"        >9</button>
+                <button class="grid-item-bright"    id="mul"    onclick="OnInput('mul')"    >×</button>
+                <button class="grid-item"           id="4"      onclick="OnInput(4)"        >4</button>
+                <button class="grid-item"           id="5"      onclick="OnInput(5)"        >5</button>
+                <button class="grid-item"           id="6"      onclick="OnInput(6)"        >6</button>
+                <button class="grid-item-bright"    id="sub"    onclick="OnInput('sub')"    >-</button>
+                <button class="grid-item"           id="1"      onclick="OnInput(1)"        >1</button>
+                <button class="grid-item"           id="2"      onclick="OnInput(2)"        >2</button>
+                <button class="grid-item"           id="3"      onclick="OnInput(4)"        >3</button>
+                <button class="grid-item-bright"    id="add"    onclick="OnInput('add')"    >+</button>
+                <button class="grid-item"                       onclick="OnInput('inv')"    >±</button>
+                <button class="grid-item"           id="0"      onclick="OnInput(0)"        >0</button>
+                <button class="grid-item"           id="dec"    onclick="OnInput('dec')"    >.</button>
+                <button class="grid-item-blue"      id="ent"    onclick="OnInput('ent')"    >=</button>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

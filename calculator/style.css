@@ -18,15 +18,58 @@
 }
 
 .CalcContainer {
+    position: absolute;
+    z-index: 9;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.CalcContainer-maximized {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 100dvw;
+    height: 100dvh;
 }
 
 .Calculator {
     background-color: rgb(59, 59, 59);
     color: white;
-    width: 25dvw;
+    width: 400px;
+}
+
+.Calculator-maximized {
+    background-color: rgb(59, 59, 59);
+    color: white;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.CalculatorTopBar {
+    cursor: move;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.CalculatorTopBar-maximized {
+    z-index: 10;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .grid-container {
@@ -34,6 +77,7 @@
     gap: 5px;
     grid-template-columns: auto auto auto auto;
     padding: 5px;
+    height: calc(100% - 125px);
 }
 
 .grid-item {
@@ -45,9 +89,11 @@
     font-size: 200%;
     text-align: center;
 }
+
 .grid-item:hover {
     background-color: rgb(95, 94, 94);
 }
+
 .grid-item:active {
     background-color: rgb(112, 112, 112);
 }
@@ -61,9 +107,11 @@
     font-size: 200%;
     text-align: center;
 }
+
 .grid-item-bright:hover {
     background-color: rgb(145, 144, 144);
 }
+
 .grid-item-bright:active {
     background-color: rgb(160, 160, 160);
 }
@@ -77,9 +125,11 @@
     font-size: 200%;
     text-align: center;
 }
+
 .grid-item-blue:hover {
     background-color: rgb(0, 155, 155);
 }
+
 .grid-item-blue:active {
     background-color: rgb(0, 175, 175);
 }
@@ -102,9 +152,11 @@
 .taskbarButton-white {
     background-color: inherit;
 }
+
 .taskbarButton-white:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
 .taskbarButton-white:active {
     background-color: rgba(255, 255, 255, 0.75);
 }
@@ -112,9 +164,11 @@
 .taskbarButton-red {
     background-color: inherit;
 }
+
 .taskbarButton-red:hover {
     background-color: rgba(255, 0, 0, 0.5);
 }
+
 .taskbarButton-red:active {
     background-color: rgba(255, 0, 0, 0.75);
 }
