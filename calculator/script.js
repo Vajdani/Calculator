@@ -56,13 +56,32 @@ var codeToNum = {
     "Numpad9": 9,
 }
 
-function Toggle() {
-    isOn = !isOn
-    document.getElementById("calc").style.display = isOn ? "flex" : "none"
+function Toggle(override) {
+    if (override != null) {
+        isOn = override
+    }
+    else {
+        isOn = !isOn
+    }
+
+
+    Maximize(false)
+
+    let calc = document.getElementById("calc")
+    calc.style.display = isOn ? "flex" : "none"
+
+    let bounds = calc.getBoundingClientRect()
+    calc.style.top = ((window.innerHeight - bounds.height) / 2) + "px"
+    calc.style.left = ((window.innerWidth - bounds.width )/ 2) + "px"
 }
 
-function maximize() {
-    maximized = !maximized
+function Maximize(override) {
+    if (override != null) {
+        maximized = override
+    }
+    else {
+        maximized = !maximized
+    }
 
     let calc = document.getElementById("calc")
     if (maximized) {
